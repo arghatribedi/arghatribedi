@@ -77,7 +77,7 @@ main{
     grid-template-rows: auto auto;}
 
 .intro{
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: justify;
 }
 .buttons{
@@ -116,12 +116,12 @@ main{
     
     
 }
-.wrapper{
+/* .wrapper{
     display: grid;
-    grid-template-rows: repeat(auto-fill,minmax(300px, 1fr));
-    
+    grid-template-rows: repeat(auto-fill,minmax(300px, 1fr)); 
 
-}
+} */
+
 .blog_post .wrapper:hover{
     box-shadow: -10px 10px 9px #1b1b1ba4 ; 
     cursor: pointer;   
@@ -142,28 +142,35 @@ margin: 0;
 font-size: 0.9em;
 
 }
+
+
 .blog_post .anchor{
     background-color: #1b1b1b;
-    height: 4em;
+    height: 3em;
+    background-size: 100%;
     padding: 0.5em;
     margin: 0;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+    font-size: 1.25em;
 
 }
 .blog_post img{
     display: block;
-    height: 100%;
+    /* height: 100%; */
+    height: 20em;
     object-fit:cover;
     overflow: hidden;
-border-top-left-radius: 0.5em;
-border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    /* background-color: #1b1b1b5d; */
+    opacity: 0.6;
 }
 
 
 
 .text{
-    padding-left: 4em;
+    /* padding-left: 4em; */
     font-size: 0.9em;
     width: 65%;
 }
@@ -317,6 +324,26 @@ border-radius: 0.5em;}
 /*---- responsiveness code ------*/
 @media screen and (max-width:569px){
     body{font-size: 0.9em;}
+    .blog_post .anchor{font-size: 1.5em;
+    height: 2.5em;}
+    .text{
+        width: 100%;
+    }
+    .intro{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width:500px) and (max-width:810px){
+    
+    .blog_post{
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+    .text{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:810px){
@@ -333,10 +360,10 @@ border-radius: 0.5em;}
         grid-template-rows: auto auto;
         align-items: center;
     }
-    .blog_post{
-        grid-template-columns: auto;
+    /* .blog_post{
+        grid-template-columns: auto ;
         justify-content: center;
-    }
+    } */
     .intro .buttons{
         grid-template-columns: auto;
         grid-template-rows: auto auto;        
@@ -350,7 +377,7 @@ border-radius: 0.5em;}
         grid-gap: 1em;
         
     }
-    .forms{width: 100%; grid-gap: 0.5em;}    
+    .forms{width: 100%; gap: 0.5em;}    
     .liam{grid-template-columns: auto;
     text-align: center;}
     .refer{grid-template-columns: auto;}
