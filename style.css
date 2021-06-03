@@ -59,15 +59,24 @@ nav .menu, .ham_menu {
 }
 
 
+
+
 main{
     margin-top: 1em;
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
     
+    position: relative;
+    animation: mymove 1.25s;
+
 }
-.pic{margin: auto;
-    
+
+
+
+.pic{
+    margin: auto;
+    /* text-align: center; */
     clip-path: circle(8em at center);
 }
 
@@ -79,7 +88,9 @@ main{
 .intro{
     font-size: 1em;
     text-align: justify;
+    /* animation: example 20s; */
 }
+
 .buttons{
     display: grid;
     grid-template-columns: auto auto;
@@ -112,6 +123,8 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1.5em;
+    position: relative;
+    animation: mymove 1.25s;
     
     
     
@@ -208,6 +221,8 @@ font-size: 0.9em;
     grid-template-columns: 50% 50%;
     margin: 1em;
     justify-items: center;
+    position: relative;
+    animation: mymove 1.25s;
     
 }
 .forms{
@@ -251,7 +266,8 @@ font-size: 0.9em;
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1em;
-
+    position: relative;
+    animation: mymove 1.25s;
 }
 .book_card{
     display: grid;
@@ -284,7 +300,8 @@ font-size: 0.9em;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    
+    /* position: relative;
+    animation: mymove 1.25s; */
     
 }
 .card{
@@ -443,3 +460,29 @@ border-radius: 0.5em;}
     
 }
 }
+
+/* Adding fade in and ease in animation to main grid on home page  */
+
+@keyframes mymove{
+    from{bottom: 20px;}
+    to{bottom: 0px;}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.anime_test{
+    position: relative;
+    animation: mymove 1.25s;
+}
+.tweet{
+    position: relative;
+    animation: mymove 1.25s;
+}
+
+#main{animation-timing-function: ease;}
+#blog_post{animation-timing-function: ease;}
+#anime_test{animation-timing-function: ease;}
+#list_wrap{animation-timing-function: ease;}
+#con_wrap{animation-timing-function: ease;}
+#tweet{animation-timing-function: ease;}
+
